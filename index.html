@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamanna Ansari | Official</title>
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(180deg, #fff0f3 0%, #ffccd5 100%);
+            --glass: rgba(255, 255, 255, 0.7);
+            --insta-color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #4a132c;
+        }
+
+        /* Profile Header Section */
+        .profile-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .img-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 15px;
+            padding: 4px;
+            background: var(--insta-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(220, 39, 67, 0.2);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            background: white;
+        }
+
+        h1 { margin: 5px 0; font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; }
+        .insta-handle { font-size: 1rem; color: #bc1888; font-weight: 600; margin-bottom: 20px; }
+
+        /* Action Buttons */
+        .action-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            transition: transform 0.2s;
+        }
+        .btn:active { transform: scale(0.95); }
+        .btn-insta { background: #bc1888; }
+        .btn-yt { background: #ff0000; }
+        .btn-dm { background: #333; }
+
+        /* Dua Exhibition Card */
+        .exhibition-card {
+            width: 85%;
+            max-width: 600px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.5);
+            margin-bottom: 30px;
+        }
+
+        .exhibition-card h3 { margin-top: 0; color: #bc1888; }
+        .total-views { font-size: 2.5rem; font-weight: 900; color: #ff4b82; margin: 10px 0; }
+
+        /* Reels Grid */
+        .reels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 95%;
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+
+        .reel-card {
+            aspect-ratio: 9/16;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid white;
+        }
+
+        .reel-card img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Modal / Pop-up */
+        #viewModal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            width: 80%;
+            max-width: 350px;
+            padding: 40px 20px;
+            border-radius: 30px;
+            text-align: center;
+            animation: bounceIn 0.4s ease;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            70% { transform: scale(1.05); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .pop-views { font-size: 3.5rem; color: #ff4b82; font-weight: 900; }
+    </style>
+</head>
+<body>
+
+    <div class="profile-section">
+        <div class="img-container">
+            <img src="profile.jpg" class="profile-img" alt="Tamanna Ansari">
+        </div>
+        <h1>Tamanna Ansari</h1>
+        <div class="insta-handle">@tamannaansari912</div>
+
+        <div class="action-container">
+            <a href="https://instagram.com/tamannaansari912" class="btn btn-insta">Instagram</a>
+            <a href="https://youtube.com/@ItsMeTamannaTds" class="btn btn-yt">YouTube</a>
+            <a href="https://ig.me/m/tamannaansari912" class="btn btn-dm">DM Collab</a>
+        </div>
+    </div>
+
+    <div class="exhibition-card">
+        <h3>✨ Dua Exhibition Highlights</h3>
+        <p>Metiabruz event total reach:</p>
+        <div class="total-views">1.5M+ Views</div>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Creating impact through content and community.</p>
+    </div>
+
+    <h2 style="font-size: 1.2rem; margin-bottom: 20px;">📌 Featured Content</h2>
+
+    <div class="reels-grid">
+        <div class="reel-card" onclick="openPopup('782K', 'Yuva Sathi Scheme')">
+            <img src="reel1.jpg" alt="Reel 1">
+        </div>
+        <div class="reel-card" onclick="openPopup('683K', 'Viral Face Mask')">
+            <img src="reel2.jpg" alt="Reel 2">
+        </div>
+        <div class="reel-card" onclick="openPopup('163K', 'Child Alert News')">
+            <img src="reel3.jpg" alt="Reel 3">
+        </div>
+    </div>
+
+    <div id="viewModal" onclick="closePopup()">
+        <div class="modal-content">
+            <h3 id="pop-topic" style="color: #666;">Topic</h3>
+            <div class="pop-views" id="pop-views">0</div>
+            <p style="font-weight: 600;">Organic Reach 🚀</p>
+            <p style="font-size: 0.8rem; color: #999; margin-top: 20px;">Tap to close</p>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(views, topic) {
+            document.getElementById('pop-topic').innerText = topic;
+            document.getElementById('pop-views').innerText = views;
+            document.getElementById('viewModal').style.display = 'flex';
+        }
+        function closePopup() {
+            document.getElementById('viewModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
